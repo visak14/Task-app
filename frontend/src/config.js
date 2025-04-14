@@ -1,1 +1,1 @@
-export const BASE_URL= 'https://task-app-nine-woad.vercel.app'
+export const BASE_URL= 'https://task-app-backed.onrender.com'
