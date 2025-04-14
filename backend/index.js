@@ -13,13 +13,7 @@ app.get('/', (req, res) => {
 });
 
 app.use(bodyParser.json());
-app.use(cors({
-  origin: 'https://task-app-h1ej.vercel.app', 
-  credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization']
-}));
-app.options('*', cors());
+app.use(cors());
 app.use('/auth',AuthRouter);
 
 app.use('/tasks', TaskRouter)
