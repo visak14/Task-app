@@ -15,7 +15,9 @@ app.get('/', (req, res) => {
 app.use(bodyParser.json());
 app.use(cors({
   origin: 'https://task-app-h1ej.vercel.app', 
-  credentials: true
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 app.use('/auth',AuthRouter);
 
